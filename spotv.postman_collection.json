@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "e9bff5bd-b136-478d-bb04-699d2fc6540d",
+		"name": "spotv",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19465389"
+	},
+	"item": [
+		{
+			"name": "Get All Playlists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/playlists",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new playlist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Cafe playlist\",\r\n    \"description\": \"Lagu cocok untuk di cafe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/playlists",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all songs in a playlist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/playlists/64b8fc12c810c25adec4d464/songs",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"playlists",
+						"64b8fc12c810c25adec4d464",
+						"songs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert song into a playlist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Kukira kita asam dan garam\",\r\n    \"artists\": [\r\n        \"64b7e5a1edd5a220a2f4edfa\"\r\n    ],\r\n    \"url\": \"https://spotify.com/urlsufkjfhs\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/playlists/64b8fc12c810c25adec4d464/songs",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"playlists",
+						"64b8fc12c810c25adec4d464",
+						"songs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all songs based on playcount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/songs",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"songs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Play song in a playlist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/playlists/64b8fc12c810c25adec4d464/songs/64b8fde5f5bd9bca957f3554",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"playlists",
+						"64b8fc12c810c25adec4d464",
+						"songs",
+						"64b8fde5f5bd9bca957f3554"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
